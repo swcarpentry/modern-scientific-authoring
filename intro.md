@@ -5,7 +5,8 @@ title: Modern scientific authoring
 
 The goal of this lesson is to show how *easy* writing a paper should be in the
 21^st^ century. We will go through the basics of `markdown`, the way to use
-references, how to automatically generate an up-to-date PDF, and see a few solutions to emulate track changes using `git` and [CriticMarkup][cm]
+references, how to automatically generate an up-to-date PDF, and see a few
+solutions to emulate track changes using `git` and [CriticMarkup][cm].
 
 [cm]: http://criticmarkup.com/
 
@@ -15,8 +16,6 @@ references, how to automatically generate an up-to-date PDF, and see a few solut
 >
 > *   the Unix shell (head and tail, word count, sorting, and pipes)
 > *   Git (setting up a repository, committing files)
-> *   Python (libraries, loops, list indexing, string formatting)
-> *   SQL (creating tables, inserting data, joins)
 
 ## Topics
 
