@@ -19,8 +19,8 @@ solutions to emulate track changes using `git` and [CriticMarkup][cm].
 
 ## Topics
 
-1.  [Introduction](01-intro.html)
-2.  [Markdown basics](02-extract.html)
-3.  [Dealing with references](03-db.html)
-4.  [Makefile](03-db.html)
-5.  [Critical marks and tracked changes](03-db.html)
+1. [Introduction](01-intro.html)
+2. [Markdown basics](02-basics.html)
+3. [Dealing with references](03-db.html)
+4. [Compiling](03-db.html)
+5. [Critical marks and tracked changes](03-db.html)
