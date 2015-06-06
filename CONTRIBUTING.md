@@ -41,7 +41,7 @@ You also agree to abide by our
     Feel free to contact them if you have any questions or languishing pull requests.
 
 [conduct]: CONDUCT.md
-[issues]: https://github.com/swcarpentry/lesson-template/issues
+[issues]: https://github.com/swcarpentry/modern-scientific-authoring/issues
 [license]: LICENSE.md
 [pro-git-chapter]: http://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project
 [swc-lessons]: http://software-carpentry.org/lessons.html
