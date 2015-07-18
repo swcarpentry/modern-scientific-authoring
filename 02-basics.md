@@ -28,7 +28,7 @@ hardly important. A `YAML` header could look like
 
 ``` yaml
 ---
-title: Modern scientific authoring using Markdown and pandoc
+title: "Modern scientific authoring using Markdown and `pandoc`"
 shorttitle: Modern scientific authoring
 author: Timothée Poisot
 date: May 9, 2015
@@ -51,3 +51,76 @@ header nested under `Methods`: `Model of population dynamics`.
 # Methods
 ## Model of population dynamics
 ```
+
+## Text style
+
+Markdown easily allows to specify *italics*, **bold**, and ***bold italics***
+(although not all "flavors" of markdown agree on the last point). These styles
+can be applied using either `*` or `_`, so that the following commands are all
+equivalent:
+
+``` md
+*italics* and _italics_
+**bold** and __bold__
+***bold it.*** and ___bold it.___
+```
+
+## Code
+
+Code can be written either *inline*, by wrapping the text in backticks,
+
+``` md
+The program can be compiled using `make`.
+```
+
+, or with codeblocks, by using a line with three backticks or three tildes (`~`)
+to delimitate the code block:
+
+``` md
+This is a code block
+~~~
+this is
+a
+code block
+~~~
+```
+
+On the first line of the codeblock, it is possible to specify the *language*:
+
+~~~ md
+We can do `python`:
+
+``` python
+for i in xrange(5):
+  print "This is line " + str(i) + " of this useless loop.\n"
+```
+
+Easy peasy!
+~~~
+
+Code can also be written by using tabulations:
+
+``` md
+This is text
+
+    and this
+    is code
+
+```
+
+## Links
+
+There are two ways to write hyperlinks. The first is to write them *inline*,
+using the `[text](http://link.tld)` syntax. The second is to use named markers,
+for example:
+
+```md
+This is [a link], and this is another [link][link2].
+
+[a link]: http://link.1
+[link2]: http://link.2
+```
+
+Note that this syntax is `[text][marker]`, followed later in the document by
+`[marker]: http://link`. This being said, if there is no `[marker]`, then
+`[text]: link` *will* work.

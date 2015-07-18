@@ -17,10 +17,15 @@ solutions to emulate track changes using `git` and [CriticMarkup][cm].
 > *   the Unix shell (head and tail, word count, sorting, and pipes)
 > *   Git (setting up a repository, committing files)
 
+Almost all text editors can be configured as a productive markdown-writing
+system. *RStudio* has a markdown mode. *Atom*, *vim*, and *Sublime Text* have
+very extensive markdown support, including auto-completion of bibliography
+through plugins.
+
 ## Topics
 
 1. [Introduction](01-intro.html)
 2. [Markdown basics](02-basics.html)
-3. [Dealing with references](03-db.html)
-4. [Compiling](03-db.html)
-5. [Critical marks and tracked changes](03-db.html)
+3. [Dealing with references](03-references.html)
+4. [Compiling](04-compilation.html)
+5. [Critical marks and tracked changes](05-changes.html)
