@@ -102,7 +102,7 @@ needed, without human intervention.
 The last requirement for an academic paper is references. Markdown, through
 `pandoc` and its extension `pandoc-citeproc`, handles these very graciously. The
 `pandoc` bibliography module is able to read citations from a variety of
-formats. Originally designed for CLS JSON and CLS YAML, it can acomodate, for
+formats. Originally designed for CSL JSON and CSL YAML, it can acomodate, for
 example, bibtex and RIS.
 
 The way to note a reference is `@CitationKey`. For example, if your (bibtex) library contains the following reference:
@@ -122,6 +122,12 @@ The way to note a reference is `@CitationKey`. For example, if your (bibtex) lib
 you can refer to this article by `@thom99` in the text. All modern reference
 management software can export to one of the formats supported by `pandoc`, and
 most of them will let you customize the way the citation key looks.
+
+References can be combined (`[@John2012; @Jack2014]`), written *inline*
+(`@Doe2013` will result in `Doe (2013)` in the text if a "author-year" style is
+in use), or in parentheses (`[@Doe2013]` will yield `(Doe, 2013)`). It is also
+possible to add text to them: `[see @Billy2015 for a review]` will result in
+`(see Billy et al., 2015 for a review)`.
 
 The bibliography is automatically inserted at the end of the document, and, as
 we'll see in the next section, there are thousands of way to format it to match
