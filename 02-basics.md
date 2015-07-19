@@ -95,7 +95,7 @@ for i in xrange(5):
   print "This is line " + str(i) + " of this useless loop.\n"
 ```
 
-Easy peasy!
+Looking good!
 ~~~
 
 Code can also be written by using tabulations:
