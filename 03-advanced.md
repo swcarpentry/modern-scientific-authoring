@@ -55,7 +55,8 @@ Columns are separated by a pipe (`|`). The pipes do not need to be vertically
 aligned (but it helps a great deal when *reading* the raw documents -- there are
 plugins to take care of this in most editors).
 
-By default, columns are *left-aligned*. To specify the alignment, one needs to use `:` in  the second line, in the following ways:
+By default, columns are *left-aligned*. To specify the alignment, one needs
+using `:` in  the second line, in the following ways:
 
 | Left-aligned | Centered | Right aligned | Default (left) |
 |:-------------|:--------:|--------------:|:---------------|
@@ -105,7 +106,8 @@ The last requirement for an academic paper is references. Markdown, through
 formats. Originally designed for CSL JSON and CSL YAML, it can acomodate, for
 example, bibtex and RIS.
 
-The way to note a reference is `@CitationKey`. For example, if your (bibtex) library contains the following reference:
+The way to note a reference is `@CitationKey`. For example, if your (bibtex)
+library contains the following reference:
 
 ``` bibtex
 @ARTICLE{thom99,
