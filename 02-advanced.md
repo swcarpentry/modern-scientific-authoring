@@ -79,12 +79,12 @@ for links, only preceded by an exclamation mark (`!`).
 
 For example,
 
-![Software carpentry logo \label{f:swc}](./img/software-carpentry-banner.png)
+![Software carpentry logo \label{f:swc}](./assets/img/swc/swc-logo-blue.png)
 
 is noted:
 
 ~~~
-![Software carpentry logo \label{f:swc}](./img/software-carpentry-banner.png)
+![Software carpentry logo \label{f:swc}](./assets/img/swc/swc-logo-blue.png)
 ~~~
 {: .input}
 
@@ -92,7 +92,7 @@ or alternatively,
 
 ~~~
 ![Software carpentry logo \label{f:swc}][swc]
-[swc]: ./img/software-carpentry-banner.png
+[swc]: ./assets/img/swc/swc-logo-blue.png
 ~~~
 {: .input}
 
