@@ -24,10 +24,10 @@ through plugins.
 
 ## Topics
 
-1. [Markdown Basics](01-basics.html)
-2. [Advanced Markdown](02-advanced.html)
-3. [Compiling](03-compilation.html)
-4. [Critical Marks and Tracked Changes](04-changes.html)
+1. [The Mess We're In](01-mess.html)
+2. [Markdown Basics](02-markdown.html)
+3. [Compiling Markdown](03-compilation.html)
+4. [Advanced Markdown](04-advanced.html)
 
 ## Other Resources
 
