@@ -1,8 +1,7 @@
 ---
-layout: page
-title: Modern scientific authoring - basics
+layout: lesson
+subtitle: Basics
 ---
-
 Markdown is a *markup* format. As opposed to software like *Word*, *OpenOffice*,
 or *Papers*, what you see on the screen is the raw text, and some informations
 about formatting. The formatting itself is done later, by an additional software
@@ -26,14 +25,15 @@ Markdown allows authors to indicate metadata in the document, in the form a
 `YAML` header. `YAML` stands from Yet Another Markup Language, but this is
 hardly important. A `YAML` header could look like
 
-``` yaml
+~~~
 ---
 title: "Modern scientific authoring using Markdown and `pandoc`"
 shorttitle: Modern scientific authoring
 author: Timothée Poisot
 date: May 9, 2015
 ---
-```
+~~~
+{: .input}
 
 These elements will be used by the *template*.
 
@@ -46,11 +46,12 @@ with between one and six octothorpes. For example, the following document will
 have two first-level headers (`Introduction` and `Methods`), and a second-level
 header nested under `Methods`: `Model of population dynamics`.
 
-``` md
+~~~
 # Introduction
 # Methods
 ## Model of population dynamics
-```
+~~~
+{: .input}
 
 ## Text style
 
@@ -59,35 +60,37 @@ Markdown easily allows to specify *italics*, **bold**, and ***bold italics***
 can be applied using either `*` or `_`, so that the following commands are all
 equivalent:
 
-``` md
+~~~
 *italics* and _italics_
 **bold** and __bold__
 ***bold it.*** and ___bold it.___
-```
+~~~
+{: .input}
 
 ## Code
 
 Code can be written either *inline*, by wrapping the text in backticks,
 
-``` md
+~~~
 The program can be compiled using `make`.
-```
+~~~
+{: .input}
 
-, or with codeblocks, by using a line with three backticks or three tildes (`~`)
+or with codeblocks by using a line with three backticks or three tildes (`~`)
 to delimitate the code block:
 
-``` md
-This is a code block
 ~~~
+```
 this is
 a
 code block
-~~~
 ```
+~~~
+{: .input}
 
 On the first line of the codeblock, it is possible to specify the *language*:
 
-~~~ md
+~~~
 We can do `python`:
 
 ``` python
@@ -97,16 +100,18 @@ for i in xrange(5):
 
 Looking good!
 ~~~
+{: .input}
 
 Code can also be written by using tabulations:
 
-``` md
+~~~
 This is text
 
     and this
     is code
 
-```
+~~~
+{: .input}
 
 ## Links
 
@@ -114,12 +119,13 @@ There are two ways to write hyperlinks. The first is to write them *inline*,
 using the `[text](http://link.tld)` syntax. The second is to use named markers,
 for example:
 
-```md
+~~~
 This is [a link], and this is another [link][link2].
 
 [a link]: http://link.1
 [link2]: http://link.2
-```
+~~~
+{: .input}
 
 Note that this syntax is `[text][marker]`, followed later in the document by
 `[marker]: http://link`. This being said, if there is no `[marker]`, then

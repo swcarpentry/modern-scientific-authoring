@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Modern scientific authoring - advanced usage
+layout: lesson
+subtitle: Advanced Usage
 ---
 
 Academic papers have more information than text. In this section, we will cover
@@ -14,21 +14,21 @@ This greatly simplifies the use of equations, for example.
 Equations can be written using the `LaTeX` syntax. For example, the block below
 is valid `markdown`,
 
-``` md
+~~~
 The equation for a polynomial function is $y(x) = ax^2 + bx +c$.
-```
+~~~
+{: .input}
 
-, and so is this one too:
+and so is this one:
 
-``` md
-
+~~~
 The sum of a vector of numbers ($\mathbf{v}$) is noted
 
 \begin{equation}
 \sum_{x=1}^n\mathbf{v}_i
 \end{equation}
-
-```
+~~~
+{: .input}
 
 # Tables
 
@@ -42,11 +42,12 @@ write tables that are relatively simple. The table below
 
 is noted as
 
-``` md
+~~~
 | Lesson   | Maintainer |        Pre-requisites |
 |:---------|:-----------|----------------------:|
 | markdown | Tim        | shell, git, makefiles |
-```
+~~~
+{: .input}
 
 There are a few elements to tables. The first line is the *headers*. The second
 line gives the *alignment*. The subsequent lines are the *content* of the table.
@@ -64,11 +65,12 @@ using `:` in  the second line, in the following ways:
 
 The code for this table is
 
-``` md
+~~~
 | Left-aligned | Centered | Right aligned | Default (left) |
 |:-------------|:--------:|--------------:|:---------------|
 | `:---`       |  `:--:`  |        `---:` | `----`         |
-```
+~~~
+{: .input}
 
 # Figures
 
@@ -79,18 +81,20 @@ For example,
 
 ![Software carpentry logo \label{f:swc}](./img/software-carpentry-banner.png)
 
-is noted
+is noted:
 
-``` md
+~~~
 ![Software carpentry logo \label{f:swc}](./img/software-carpentry-banner.png)
-```
+~~~
+{: .input}
 
 or alternatively,
 
-``` md
+~~~
 ![Software carpentry logo \label{f:swc}][swc]
 [swc]: ./img/software-carpentry-banner.png
-```
+~~~
+{: .input}
 
 Note the presence of `\label{f:swc}`, which is a `LaTeX` command. This allows to
 refer to the figure in the text, using `\autoref{f:swc}`. The `autoref` package
@@ -109,7 +113,7 @@ example, bibtex and RIS.
 The way to note a reference is `@CitationKey`. For example, if your (bibtex)
 library contains the following reference:
 
-``` bibtex
+~~~
 @ARTICLE{thom99,
 	title = {The raw material for coevolution},
 	journal = {Oikos},
@@ -119,7 +123,8 @@ library contains the following reference:
 	year = {1999},
 	pages = {5--16},
 }
-```
+~~~
+{: .input}
 
 you can refer to this article by `@thom99` in the text. All modern reference
 management software can export to one of the formats supported by `pandoc`, and
