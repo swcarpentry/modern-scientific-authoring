@@ -89,30 +89,49 @@ They should also use a bibliography manager of some sort.
 *   Have an ORCID and know what to do with it
 *   Get a DOI from Figshare or Zenodo for one of their own data sets
     and understand how to use it
-*   Use [hypothes.is](hypothes.is)
 *   Understand how to publish and cite software
+*   Understand the pros and cons of new publishing and review models
 
 ### Understandings
 
-Students will understand that...
-
-FIXME
-
 ### Essential Questions
 
-FIXME
-
-### Learners Will Know...
-
-FIXME
+*   How can I manage the flood of information in my field?
+*   How can I make my work more accessible to others in my field?
+*   How does desktop WYSIWYG + email impede collaboration?
+*   Why is plain text + version control so technically demanding?
+*   How do publishers and researchers keep track of who published what?
+*   How can open access scientific publishing be sustainable?
+*   What are the pros and cons of open review?
 
 ### Learners Will Be Able To...
 
-FIXME
+*   compile Markdown to PDF or HTML using Pandoc
+*   create a GitHub pages blog
+*   create a PDF using Authorea
+*   comment on a web page using hypothes.is
+*   add their ORCID to electronic manuscripts
+*   get a DOI for a data set from Figshare or Zenodo
+*   review a document on Google Docs
+*   review a document on GitHub
+
+### Learners Will Know...
+
+*   what markup is and why it exists
+*   that *every* document uses markup - the only question is whether it's displayed or not
+*   the advantages of making data and software citable
+*   how and why to participate in online discussions of research
+*   how LaTeX, Pandoc, and Authorea work
+*   how and why to use [hypothes.is](hypothes.is)
+*   what ORCID is
+*   why data and programs should have DOIs
+*   how pull requests work (so that updating and reviewing is understandable)
 
 ## Stage 2 - Assessment
 
-### FIXME: topic title
+FIXME: need a dozen sections like this:
+
+### Topic title
 
 *   Teaching: 5-10 min
 *   Exercises: 5-10 min
