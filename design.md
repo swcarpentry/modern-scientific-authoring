@@ -71,6 +71,15 @@ The justification is:
 *   If the document lives in a version control system (GitHub),
     it provides good support for finding and merging differences resulting from concurrent changes.
 
+But we need to go further.
+If people adopt open review and comment on each other's work on blogs and via Twitter,
+the under-represented (e.g., women and some minorities) may be discouraged from taking part
+(as has happened with open source).
+Any discussion of how to use the web for scientific publishing *must* include
+discussion of how it can be mis-used,
+and what we can do about it.
+FIXME: translate this into a lesson.
+
 ## Stage 1 - Desired Results
 
 ### Goals
