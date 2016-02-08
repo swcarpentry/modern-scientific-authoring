@@ -13,21 +13,21 @@ The first printing presses didn't change this.
 They made impressions from woodblock carvings,
 which still allowed authors to put whatever they wanted wherever they wanted it.
 But then,
-some time around 1370,
+around 1370,
 craftsmen in Korea invented movable type.
 It spread like wildfire after Gutenberg introduced it to Europe in the 1440s,
 and humanity's long fall from written grace began.
 
-Movable type allowed printers to set pages
-many times more quickly than carvers could produce woodblocks.
-The cost was flexibility:
+While movable type allowed printers to set pages
+many times more quickly than carvers could produce woodblocks,
+the cost was flexibility:
 where scribes could draw anywhere on the page,
 typesetters had to put letters of uniform size in rows.
 And while diagrams were still possible,
 the lowered cost of words made them relatively many times more expensive than they had been.
 
 The typewriter (invented in the 1860s) put "printing" in millions of middle-class hands.
-Mechanical, then electrical, and then electronic computers all re-used typewriter technology
+Mechanical, electrical, and then electronic computers all re-used typewriter technology
 to print their output.
 When the first pen plotters appeared in the 1950s,
 they were too slow and too expensive to displace line printers.
@@ -35,11 +35,10 @@ What's more,
 the two technologies didn't work well together:
 it's possible to draw pictures using ASCII art,
 or to write letters with a pen plotter,
-but neither is particularly compelling.
+but neither is particularly attractive.
 
 One sign of this gap between tools meant for words and tools meant for pictures
-was the development of separate languages for controlling them
-in the 1950s and 1960s.
+was the development of separate languages for controlling them.
 Plotters were typically controlled by *drawing languages* that had commands to say,
 "Pen up,
 move to this (x,y) location,
@@ -55,11 +54,10 @@ PA250,250;
 
 *Typesetting languages* for line printers,
 on the other hand,
-were usually more abstract.
-Authors could tell the computer to lay out a phrase as a second-level heading
+let authors tell the computer to lay out a phrase as a second-level heading
 or set certain words in italics,
 but it was then the computer's job to determine
-where things should actually go on the page:
+where things would go and what they would look like:
 
 ~~~
 .t2 Section Heading
@@ -71,8 +69,7 @@ and lines starting with '.' are commands.
 
 A third kind of language emerged in this period as well,
 one meant to describe the *content* of a document rather than its *appearance*.
-Doctors wanted to be able to search patient histories,
-and lawyers to search cases for precedents,
+Doctors and lawyers wanted to be able to search patient histories and precedents,
 but the computers of the time weren't powerful enough to handle natural language.
 Instead,
 companies like IBM developed *markup languages*
@@ -84,34 +81,35 @@ in <event>the Fukuyama disaster</event>.
 ~~~
 
 These worlds collided after the invention of the laser printer in the 1970s,
-and that tension was only magnified by the spread of high-resolution computer screens in the 1980s
-and of the World Wide Web in the 1990s.
+and that tension was only magnified by high-resolution computer screens in the 1980s
+and the World Wide Web in the 1990s.
 On the one hand,
-most people simply wanted to write---to put these words here and those words there,
+most people simply want to write---to put these words here and those words there,
 or make some of them green and others italic.
-WYSIWIG (what you see is what you get) editors like MacWrite and Microsoft Word filled this need,
-and still do,
-but documents produced this way had two shortcomings:
+WYSIWIG (what you see is what you get) editors like MacWrite and Microsoft Word fill this need,
+but documents produced this way have two shortcomings:
 
-1.  They were *rigid*.
-    If someone laid things out manually,
-    then changed the size of the page,
-    all their hard work had to be re-done.
+1.  They are *rigid*.
+    If someone lays things out manually,
+    then changes the size of the page,
+    their hard work must be re-done.
 
-2.  They were *opaque*.
-    While a computer could tell if something was in a normal font or italics,
-    it had no way to know if the italics meant "foreign language",
-    "paper title",
-    or "definition of a new term".
+2.  They are *opaque*.
+    Telling the computer to display something in italics
+    doesn't tell it whether that phrase is a book title,
+    in a foreign language,
+    or defining a new term.
 
-Typesetting languages were supposed to address both problems.
-Instead of saying what each thing should look like
-and where it should go on the page,
-authors were supposed to tell the computer what kind of thing it was---e.g., a title or a new term---and
-let the computer decide where to put it.
-Doing this also allowed people to switch styles easily and consistently by telling the computer,
+Typesetting and markup languages address both problems.
+Instead of saying what things should look like and where they should go on the page,
+authors are supposed to tell the computer what kinds of things they are,
+e.g., a title or a new term.
+The computer is then supposed to decide what it should look like and where it should go.
+Separating semantics and appearance in this way also allows people to switch styles easily and consistently
+by telling the computer,
 "Typeset all second-level headings in 16-point Garamond, left-aligned."
-But this approach also had its shortcomings:
+
+But this approach also has shortcomings:
 
 1.  Computers don't always lay out text the way human beings would
     because they don't understand it.
@@ -121,86 +119,105 @@ But this approach also had its shortcomings:
 2.  Specifying their documents' semantics seems alien to most people,
     and much more work than just enlarging the title a few times.
 
-Typesetting languages had one other drawback: compilation.
-Reading a document and figuring out what should go where takes the computer some time.
-Figuring out why thigns don't look as they should can take the *person* even more time;
-it's exactly like debugging a program,
-and debugging is hard.
+3.  Interpreting what the user typed in and figuring out what to display takes the computer time.
+    Figuring out why the document doesn't look like it ought to takes the person even more time;
+    it's exactly like debugging a program,
+    and debugging is frustrating.
 
-The result of all this is that researchers have four main options
-when it comes to writing:
+No-one has invented something that avoids all of these problems,
+so today's researchers have a confusing variety of choices when it comes to writing:
 
-1.  A WYSIWYG tool like Microsoft Word or LibreOffice (both of which work with the `.docx` format).
+1.  A desktop WYSIWYG tool like Microsoft Word or LibreOffice (both of which work with the `.docx` format).
     This is by far the easiest way to create simple things like letters,
     but it is rigid and opaque,
     has poor support for laying out equations,
     and doesn't work well with version control systems (something we discuss below).
 
-2.  [LaTeX][latex].
-    This powerful typesetting language has excellent support for equations and bibliographies,
-    and allows users to define their own extensions.
+2.  A web-based WYSIWYG tool like Google Docs.
+    This has the immediacy of Word or LibreOffice,
+    and makes collaboration easier
+    (since everyone shares one copy of the document).
+    It is still rigid and opaque,
+    though,
+    and a growing number of people are uncomfortable with putting all their eggs
+    in  an unaccountable private company's basket.
+
+3.  [LaTeX][latex] on the desktop.
+    This powerful typesetting language has excellent support for equations and bibliographies.
     It also works well with version control,
     since documents are written as plain text.
     However,
     it is by far the most complex to learn,
-    and debugging strange rendering glitches can take many painful hours.
+    and getting things laid out exactly as desired can take many painful hours.
 
-3.  HTML.
+4.  Web-based tools like [Authorea][authorea] and [Overleaf][overleaf]
+    that offer users a WYSIWYG editing interface
+    but store documents as LaTeX
+    and re-display them in real time as changes are typed in.
+
+5.  HTML.
     The native language of the web is much (much) simpler than LaTeX,
     but also does much less:
-    even simple things like numbering section headings aren't directly supported.
+    even simple things like footnotes, bibliographic references, and numbered sections aren't directly supported.
     It can also be quite verbose,
-    at least compared to...
+    and CSS
+    (the language used to tell browsers how to display HTML)
+    is famously quirky.
 
-4.  [Markdown][markdown].
-    Created as a simple alternative to HTML,
-    it does even less,
-    but is correspondingly simpler to write.
+6.  [Markdown][markdown] was created as a simple alternative to HTML.
+    It uses the conventions of plain-text email:
+    blank lines separate paragraphs,
+    putting something in `*asterisks*` makes it italic,
+    and so on.
+    It does less than HTML,
+    but requires less typing.
+    Unfortunately,
+    though,
+    almost every implementation adds its own features,
+    so "standard Markdown" is an oxymoron.
 
-Of course,
-what with programmers being programmers,
-the distinctions between these aren't nearly as clearly in real life:
+A few other considerations are:
 
 1.  Formats like `.docx` actually store a mix of typesetting commands and actual text,
     just like LaTeX, HTML, and Markdown.
     The difference is that in the latter,
     the commands themselves are also written in human-readable text
-    (for some definition of "readable").
+    (for a loose definition of "readable").
     As a result,
     only special-purpose tools like Microsoft Word and LibreOffice can process the former reliably.
-
-2.  But for all that hard-core programmers may sneer at this,
-    they have done no better.
-    Forty years after their invention,
-    most version control systems can still only handle documents written in plain text:
-    when confronted with Microsoft Word documents,
-    all they can say is, "Difference detected."
-    There is no good reason for this---the formats are well-defined and widely-used---and
-    the net effect is that
-    anyone who wants to adopt version control has to abandon the tools
-    that they and their colleagues have used productively for years
-    in the hope of greater productivity at some future date.
-
-3.  While HTML and Markdown do not support equations directly,
-    packages exist to allow authors to embed LaTeX-style equations in documents of either kind.
-    The [Jupyter Notebook][jupyter] relies on one such package,
-    which allows users to put equations and other things in Markdown cells
-    to be rendered in the browser.
-
-4.  Today's computers are fast enough to recompile LaTeX almost as quickly as people can type.
-    This has fueled the creation of tools like [Authorea][authorea] and [Overleaf][overleaf],
-    which store documents as LaTeX
-    but re-draw them as authors type.
-
-5.  It has also fostered a wide variety of in-browser WYSIWYG editors
-    (usually written in Javascript)
-    that present users with a WYSIWYG interface,
-    but store HTML or Markdown.
-    Tools like Google Docs work this way:
+    Tools like Google Docs work this way as well:
     the Javascript in the user's browser turns commands like "make this bold"
     into tags that browsers know how to render.
     These tags are hidden from users,
     who only see the document's rendered form.
+    (Authorea and Overleaf do the same thing,
+    except their storage format is LaTeX.)
+
+2.  While hard-core programmers sneer at WYSIWYG tools and their non-textual formats,
+    their feet are made of clay.
+    Thirty years after WYSIWYG document formats became widespread,
+    most version control systems still can't handle them:
+    when confronted with two different version of a Microsoft Word file,
+    all Git can say is, "Difference detected."
+    There is no good reason for this other than snobbery,
+    but the net effect is that
+    anyone who wants to adopt version control has to abandon the tools
+    that they and their colleagues have used productively for years
+    in the hope of greater productivity at some future date.
+
+3.  HTML and Markdown do not support equations directly,
+    but packages exist to allow authors to embed LaTeX-style equations in documents of either kind.
+    The [Jupyter Notebook][jupyter] relies on one such package,
+    which allows users to put equations and other things in Markdown cells
+    to be rendered in the browser.
+
+4.  It is relatively straightforward to integrate desktop text-based systems like LaTeX
+    and other tools that manage computation
+    to support reproducible research.
+    It's much more complicated, at least right now,
+    to integrate a typical geophysics or bioinformatics pipeline
+    with a Google Doc or LibreOffice
+    so that figures are automatically updated when data changes.
 
 All of the discussion above has assumed that authors are creating letters and papers,
 but researchers also frequently need to create posters and slides to present their work.
@@ -251,10 +268,33 @@ but this will be the task of years.
 
 Since most researchers are already familiar with desktop WYSIWYG systems like Microsoft Word
 and cloud-based alternatives like Google Docs,
-this lesson will focus on the simplest pure-text alternative:
-Markdown.
+this lesson will introduce two pure-text alternatives:
+LaTeX for papers,
+and Markdown for things like blogs and lab websites.
+We recommend Markdown for the web because it does everything most people want HTML to do,
+without as much typing.
+We recommend *against* it for manuscripts,
+at least for now,
+because:
 
-FIXME: outline the rest of the lesson.
+*   The odds are against your collaborators knowing it or your journal accepting it as a format.
+*   It doesn't yet do many of the things researchers want (like bibliographic citations).
+
+LaTeX, on the other hand:
+
+*   compiles to PDF and other standard formats,
+*   does a pretty good job of laying out figures and tables,
+*   plays nicely with version control,
+*   is compatible with lots of bibliograpy management software, and
+*   many journals have LaTeX templates for papers.
+
+FIXME: outline of three-hour lesson
+
+*   Markdown for web pages
+    *   Convert to HTML with Pandoc
+    *   (Optional) convert to HTML with Jekyll for GitHub Pages
+*   LaTeX for papers
+    *   Show how to regenerate papers
 
 [authorea]: https://www.authorea.com/
 [jupyter]: http://jupyter.org/
