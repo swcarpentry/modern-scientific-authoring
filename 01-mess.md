@@ -176,48 +176,57 @@ so today's researchers have a confusing variety of choices when it comes to writ
     almost every implementation adds its own features,
     so "standard Markdown" is an oxymoron.
 
-A few other considerations are:
+And if that wasn't confusing enough:
+HTML and Markdown do not support equations directly,
+but packages exist to allow authors to embed LaTeX-style equations in documents of either kind.
+The [Jupyter Notebook][jupyter] relies on one such package,
+which allows users to put equations and other things in Markdown cells
+to be rendered in the browser.
 
-1.  Formats like `.docx` actually store a mix of typesetting commands and actual text,
-    just like LaTeX, HTML, and Markdown.
-    The difference is that in the latter,
-    the commands themselves are also written in human-readable text
-    (for a loose definition of "readable").
-    As a result,
-    only special-purpose tools like Microsoft Word and LibreOffice can process the former reliably.
-    Tools like Google Docs work this way as well:
-    the Javascript in the user's browser turns commands like "make this bold"
-    into tags that browsers know how to render.
-    These tags are hidden from users,
-    who only see the document's rendered form.
-    (Authorea and Overleaf do the same thing,
-    except their storage format is LaTeX.)
+One final consideration is that
+it is relatively straightforward to integrate desktop text-based systems like LaTeX
+and other tools that manage computation
+to support reproducible research.
+It's much more complicated, at least right now,
+to integrate a typical geophysics or bioinformatics pipeline
+with a Google Doc or LibreOffice
+so that figures are automatically updated when data changes.
 
-2.  While hard-core programmers sneer at WYSIWYG tools and their non-textual formats,
-    their feet are made of clay.
-    Thirty years after WYSIWYG document formats became widespread,
-    most version control systems still can't handle them:
-    when confronted with two different version of a Microsoft Word file,
-    all Git can say is, "Difference detected."
-    There is no good reason for this other than snobbery,
-    but the net effect is that
-    anyone who wants to adopt version control has to abandon the tools
-    that they and their colleagues have used productively for years
-    in the hope of greater productivity at some future date.
-
-3.  HTML and Markdown do not support equations directly,
-    but packages exist to allow authors to embed LaTeX-style equations in documents of either kind.
-    The [Jupyter Notebook][jupyter] relies on one such package,
-    which allows users to put equations and other things in Markdown cells
-    to be rendered in the browser.
-
-4.  It is relatively straightforward to integrate desktop text-based systems like LaTeX
-    and other tools that manage computation
-    to support reproducible research.
-    It's much more complicated, at least right now,
-    to integrate a typical geophysics or bioinformatics pipeline
-    with a Google Doc or LibreOffice
-    so that figures are automatically updated when data changes.
+> ## More Heat than Light
+>
+> The division between WYSIWYG and typesetting/markup formats is more apparent than real.
+> Formats like `.docx` actually store a mix of typesetting commands and actual text,
+> just like LaTeX, HTML, and Markdown.
+> The difference is that the latter store the commands as human-readable text,
+> which means that legacy text processing tools like the standard Unix command-line utilities
+> can be used to process them
+> (though as [this comment on Stack Overflow][html-regexp] indicates,
+> there are limits to how much those tools can actually do).
+> In contrast,
+> the formatting instructions embedded in Microsoft Word and LibreOffice
+> are created by and for specialized programs,
+> so plain-text tools like `grep` don't work with them.
+>
+> Tools like Google Docs work this way as well:
+> the Javascript in the user's browser turns commands like "make this bold"
+> into tags that browsers know how to render.
+> These tags are hidden from users,
+> who only see the document's rendered form.
+> (Authorea and Overleaf do the same thing,
+> except their storage format is LaTeX.)
+>
+> And when hard-core programmers sneer at WYSIWYG tools and their non-textual formats,
+> their feet are made of clay.
+> Thirty years after WYSIWYG document formats became widespread,
+> most version control systems still can't handle them:
+> when confronted with two different version of a Microsoft Word file,
+> all Git can say is, "Difference detected."
+> There is no good reason for this other than snobbery,
+> but the net effect is that
+> anyone who wants to adopt version control has to abandon the tools
+> that they and their colleagues have used productively for years
+> in the hope of greater productivity at some future date.
+{: .callout}
 
 All of the discussion above has assumed that authors are creating letters and papers,
 but researchers also frequently need to create posters and slides to present their work.
@@ -297,6 +306,7 @@ FIXME: outline of three-hour lesson
     *   Show how to regenerate papers
 
 [authorea]: https://www.authorea.com/
+[html-regexp]: http://stackoverflow.com/a/1732454/1403470
 [jupyter]: http://jupyter.org/
 [latex]: http://www.latex-project.org/
 [markdown]: http://daringfireball.net/projects/markdown/

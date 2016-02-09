@@ -9,7 +9,7 @@ subtitle: Lesson Design
         *   Numerate disciplines (astronomy, economics)
         *   Digital humanities
         *   Librarians
-    *   Are writing, publishing, and managing papers, theses, grant proposals, lessons, etc.
+    *   Who are writing, publishing, and managing papers, theses, grant proposals, lessons, etc.
 *   Prerequisites
     *   Git/GitHub (for GitHub Pages)
     *   Command line (for Pandoc)
@@ -32,7 +32,9 @@ we want learners to:
 6.  Make it easy to share the final version with collaborators and submit it to journals
 
 We recommend against traditional desktop tools like LibreOffice and Microsoft Word
-because they make collaboration difficult.
+because they make collaboration difficult:
+six people mailing each other copies of a paper with "Track Changes" enabled
+is a sure way to lose work (and time).
 The nerd alternative is:
 
 1.  Manuscripts are written in a plain text format such as LaTeX or Markdown that plays nicely with version control
