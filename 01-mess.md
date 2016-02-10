@@ -194,41 +194,44 @@ so that figures are automatically updated when data changes.
 
 > ## More Heat than Light
 >
-> The division between WYSIWYG and typesetting/markup formats is more apparent than real.
-> Formats like `.docx` actually store a mix of typesetting commands and actual text,
-> just like LaTeX, HTML, and Markdown.
-> The difference is that the latter store the commands as human-readable text,
-> which means that legacy text processing tools like the standard Unix command-line utilities
-> can be used to process them
+> The division between WYSIWYG and typesetting/markup
+> has more to do with tools than with actual formats.
+> A `.docx` file actually contains a mix of typesetting commands and text,
+> just like a LaTeX, HTML, or Markdown file.
+> The difference is that the commands in the latter are stored as human-readable text,
+> which means that the standard Unix command-line utilities can process them
 > (though as [this comment on Stack Overflow][html-regexp] indicates,
-> there are limits to how much those tools can actually do).
+> there are limits to how much they can actually do).
 > In contrast,
 > the formatting instructions embedded in Microsoft Word and LibreOffice
-> are created by and for specialized programs,
-> so plain-text tools like `grep` don't work with them.
+> are created by and for specific special-purpose programs,
+> so plain-text tools like `grep` can't handle them.
 >
-> Tools like Google Docs work this way as well:
-> the Javascript in the user's browser turns commands like "make this bold"
-> into tags that browsers know how to render.
-> These tags are hidden from users,
-> who only see the document's rendered form.
-> (Authorea and Overleaf do the same thing,
-> except their storage format is LaTeX.)
+> The same is true of Google Docs:
+> formatting instructions are embedded in the document,
+> then executed by Javascript running in the user's browser
+> to create the rendered page that the user interacts with.
+> Authorea and Overleaf do the same thing,
+> except their storage format is LaTeX.
 >
-> And when hard-core programmers sneer at WYSIWYG tools and their non-textual formats,
-> their feet are made of clay.
-> Thirty years after WYSIWYG document formats became widespread,
-> most version control systems still can't handle them:
+> Hard-core programmers may sneer at WYSIWYG tools and their non-textual formats,
+> but their feet are made of clay.
+> Microsoft Word has been around for three decades;
+> its document format has changed several times in those years,
+> but there has still been plenty of time for command-line aficionados
+> to adapt their favored tools to handle it.
+> That hasn't happened, though,
+> which means that most version control systems still can't handle
+> the most widely-used documents formats in the world:
 > when confronted with two different version of a Microsoft Word file,
-> all Git can say is, "Difference detected."
-> There is no good reason for this other than snobbery,
-> but the net effect is that
-> anyone who wants to adopt version control has to abandon the tools
-> that they and their colleagues have used productively for years
+> all Git and its kin can say is, "Difference detected."
+> The net effect is that
+> anyone who wants to adopt version control
+> has to abandon the tools that they and their colleagues have used productively for years
 > in the hope of greater productivity at some future date.
 {: .callout}
 
-All of the discussion above has assumed that authors are creating letters and papers,
+The discussion above has assumed that authors are creating letters and papers,
 but researchers also frequently need to create posters and slides to present their work.
 PowerPoint is the undisputed queen of presentation tools;
 while many people have [critiqued it][tufte-powerpoint],
@@ -247,8 +250,8 @@ rather than integral parts of the document.
 
 All this leaves us in an uncomfortable situation.
 On the one hand,
-we believe very strongly that papers and presentations are integral parts of research projects,
-and should be stored and managed in the same way as software and data.
+papers and presentations are integral parts of research projects,
+and should be tracked and shared just like code and data.
 On the other hand,
 as [Stephen Turner said][turner-comment-docs]:
 
@@ -267,26 +270,28 @@ as [Stephen Turner said][turner-comment-docs]:
 > Good intentions aside,
 > it always comes down to "just give me a Word document with tracked changes," or similar.
 
-We therefore accept that for the foreseeable future,
-many research projects will choose to use WYSIWYG documents
-rather than typesetting languages.
-We *hope* that hybrid systems will gain ground,
-and that programmers will finally have the decency to teach their tools how to work with
-the document formats that the other 90% of the human race prefers,
+For the foreseeable future,
+many researchers will therefore continue to use WYSIWYG editors
+(and their associated formats)
+rather than switch to pure-text typesetting tools.
+Hybrid systems like [Authorea][authorea] and [Overleaf][overleaf] may turn this cliff into a ramp,
+and programmers might finally have the decency to pay attention to
+the document formats that the other 99% of the human race prefers,
 but this will be the task of years.
 
 Since most researchers are already familiar with desktop WYSIWYG systems like Microsoft Word
 and cloud-based alternatives like Google Docs,
-this lesson will introduce two pure-text alternatives:
-LaTeX for papers,
-and Markdown for things like blogs and lab websites.
+this lesson will cover two pure-text alternatives:
+Markdown for websites and blogs,
+and LaTeX for manuscripts.
 We recommend Markdown for the web because it does everything most people want HTML to do,
 without as much typing.
-We recommend *against* it for manuscripts,
-at least for now,
-because:
+We recommend *against* it for manuscripts (at least for now) because:
 
-*   The odds are against your collaborators knowing it or your journal accepting it as a format.
+*   Most journals don't accept it as a submission format.
+*   The odds are against senior collaborators being willing to adopt it.
+    (Of course,
+    the odds are also against them being willing to switch to LaTeX if they're not already using it...)
 *   It doesn't yet do many of the things researchers want (like bibliographic citations).
 
 LaTeX, on the other hand:
@@ -295,15 +300,7 @@ LaTeX, on the other hand:
 *   does a pretty good job of laying out figures and tables,
 *   plays nicely with version control,
 *   is compatible with lots of bibliograpy management software, and
-*   many journals have LaTeX templates for papers.
-
-FIXME: outline of three-hour lesson
-
-*   Markdown for web pages
-    *   Convert to HTML with Pandoc
-    *   (Optional) convert to HTML with Jekyll for GitHub Pages
-*   LaTeX for papers
-    *   Show how to regenerate papers
+*   is accepted by many journals (though this varies widely from discipline to discpline).
 
 [authorea]: https://www.authorea.com/
 [html-regexp]: http://stackoverflow.com/a/1732454/1403470
