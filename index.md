@@ -26,8 +26,7 @@ through plugins.
 
 1. [The Mess We're In](01-mess.html)
 2. [Markdown Basics](02-markdown.html)
-3. [Compiling Markdown](03-compilation.html)
-4. [Advanced Markdown](04-advanced.html)
+3. [Advanced Markdown](03-advanced.html)
 
 ## Other Resources
 
