@@ -120,7 +120,7 @@ But this approach also has shortcomings:
     and much more work than just enlarging the title a few times.
 
 3.  Interpreting what the user typed in and figuring out what to display takes the computer time.
-    Figuring out why the document doesn't look like it ought to takes the person even more time;
+    Figuring out why the document doesn't look like it was intended to takes the person even more time;
     it's exactly like debugging a program,
     and debugging is frustrating.
 
@@ -151,7 +151,8 @@ so today's researchers have a confusing variety of choices when it comes to writ
     and getting things laid out exactly as desired can take many painful hours.
 
 4.  Web-based tools like [Authorea][authorea] and [Overleaf][overleaf]
-    that offer users a WYSIWYG editing interface
+    that offer users a WYSIWYG editing interface,
+    and web-based online collaboration,
     but store documents as LaTeX
     and re-display them in real time as changes are typed in.
 
@@ -198,7 +199,7 @@ so that figures are automatically updated when data changes.
 > has more to do with tools than with actual formats.
 > A `.docx` file actually contains a mix of typesetting commands and text,
 > just like a LaTeX, HTML, or Markdown file.
-> The difference is that the commands in the latter are stored as human-readable text,
+> The difference is that the commands in the latter set are stored as human-readable text,
 > which means that the standard Unix command-line utilities can process them
 > (though as [this comment on Stack Overflow][html-regexp] indicates,
 > there are limits to how much they can actually do).
@@ -209,7 +210,7 @@ so that figures are automatically updated when data changes.
 >
 > The same is true of Google Docs:
 > formatting instructions are embedded in the document,
-> then executed by Javascript running in the user's browser
+> then executed by JavaScript running in the user's browser
 > to create the rendered page that the user interacts with.
 > Authorea and Overleaf do the same thing,
 > except their storage format is LaTeX.
@@ -259,7 +260,7 @@ as [Stephen Turner said][turner-comment-docs]:
 > Oh, but before that, you have to explain the difference between plain text and word processing.
 > And text editors.
 > And Markdown/LaTeX compilers.
-> And BiBTeX.
+> And BibTeX.
 > And Git.
 > And GitHub. Etc.
 > Meanwhile he/she is getting paged from the OR...
