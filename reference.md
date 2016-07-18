@@ -1,5 +1,5 @@
 ---
-layout: lesson
-subtitle: Reference
+layout: reference
+permalink: /reference/
 ---
 FIXME: fill in

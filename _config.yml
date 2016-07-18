@@ -1,91 +1,65 @@
-#===============================================================================
-# Configuration file for this site.
-#
-# https://help.github.com/articles/repository-metadata-on-github-pages/ explains
-# the GitHub-specific variables available to Jekyll.
-#===============================================================================
+#------------------------------------------------------------
+# Values for this lesson.
+#------------------------------------------------------------
 
-#--------------------------------------------------------------------------------
-# Values for this lesson - EDIT THIS SECTION.
-#
-# Note that there is some redundancy here, but since YAML variables can't
-# use the values of other YAML variables, we've left it as is.
-#-------------------------------------------------------------------------------
+# Which carpentry is this ("swc" or "dc")?
+carpentry: "swc"
 
-# Website domain (no trailing slash).
-# E.g., http://yourname.github.io
-domain: "http://swcarpentry.github.io"
+# Overall title for pages.
+title: "Modern Scientific Authoring"
 
-# Base URL below the domain (no trailing slash).
-# This will usually be the lesson slug with a leading slash.
-baseurl: "/modern-scientific-authoring"
+# Contact email address.
+email: lessons@software-carpentry.org
 
-# Lessons's GitHub repository.
-github_repo   : "http://github.com/swcarpentry/modern-scientific-authoring"
+#------------------------------------------------------------
+# Generic settings (should not need to change).
+#------------------------------------------------------------
 
-# The lesson's title.
-lesson_title: "Modern Scientific Authoring"
+# What kind of thing is this ("workshop" or "lesson")?
+kind: "lesson"
 
-# Logo image (white with transparent background to stand out on blue background)
-logo: "swc-logo-white.svg"
+# Magic to make URLs resolve both locally and on GitHub.
+# See https://help.github.com/articles/repository-metadata-on-github-pages/.
+repository: <USERNAME>/<PROJECT>
 
-#-------------------------------------------------------------------------------
-# Software Carpentry values.
-#-------------------------------------------------------------------------------
+# Sites.
+amy_site: "https://amy.software-carpentry.org/workshops"
+dc_site: "https://datacarpentry.org"
+swc_github: "https://github.com/swcarpentry"
+swc_site: "https://software-carpentry.org"
+template_repo: "https://github.com/swcarpentry/styles"
+example_repo: "https://github.com/swcarpentry/lesson-example"
+example_site: "https://swcarpentry.github.com/lesson-example"
+workshop_repo: "https://github.com/swcarpentry/workshop-template"
+workshop_site: "https://swcarpentry.github.io/workshop-template"
 
-blog        : "http://software-carpentry.org/feed.xml"
-contact     : "admin@software-carpentry.org"
-files       : "http://files.software-carpentry.org"
-github      : "http://github.com/swcarpentry"
-githubio    : "http://swcarpentry.github.io/"
-installer   : "https://github.com/swcarpentry/windows-installer/releases/download/v0.3/SWCarpentryInstaller.exe"
-site        : "http://software-carpentry.org"
-twitter     : "http://twitter.com/swcarpentry"
-vm          : "https://docs.google.com/uc?id=0B4Kr6DYkzkQtSTZLQzF4aVB4NDQ&export=download"
-pre_survey  : "https://www.surveymonkey.com/r/swc_pre_workshop_v1"
-post_survey : "https://www.surveymonkey.com/r/swc_post_workshop_v1"
-parent_domain : "http://gvwilson.github.io/swctasks-website"
-footer_description : "Software Carpentry is volunteer non-profit organization dedicated to teaching basic computing skills to researchers."
+# Surveys.
+pre_survey: "https://www.surveymonkey.com/r/swc_pre_workshop_v1?workshop_id="
+post_survey: "https://www.surveymonkey.com/r/swc_post_workshop_v1?workshop_id="
 
-socialmedia :
-    - name: GitHub
-      url: http://github.com/swcarpentry
-      class: icon-github
-      title: Source
-    - name: Twitter
-      url: http://twitter.com/swcarpentry
-      class: icon-twitter
-      title: "Software Carpentry on Twitter"
-    - name: YouTube
-      url: https://www.youtube.com/user/softwarecarpentry
-      class: icon-youtube
-      title: "Software Carpentry Videos"
+# Start time in minutes (0 to be clock-independent, 540 to show a start at 09:00 am)
+start_time: 0
 
-#--------------------------------------------------------------------------------
-# Services.
-#--------------------------------------------------------------------------------
+# Specify that things in the episodes collection should be output.
+collections:
+  episodes:
+    output: true
+    permalink: /:path/
+  extras:
+    output: true
 
-services:
-  - name: "Contact"
-    url: "/contact/"
-    title: "Contact"
-  - name: "RSS"
-    url: "/feed.xml"
-    title: "Subscribe to RSS Feed"
-  - name: "sitemap.xml"
-    url: "/sitemap.xml"
-    title: "Sitemap for Google Webmaster Tools"
-  - name: "License"
-    url: "/license/"
-    title: "License"
+# Set the default layout for things in the episodes collection.
+defaults:
+  - scope:
+      path: ""
+      type: episodes
+    values:
+      layout: episode
 
-#--------------------------------------------------------------------------------
-# Settings for Jekyll - should not need to be modified.
-# (Need to be here rather than in a _data file to satisfy Jekyll.)
-#--------------------------------------------------------------------------------
+# Files and directories that are not to be copied.
+exclude:
+  - Makefile
+  - bin
 
-markdown        : kramdown
-kramdown        :
-  entity_output : as_input # &mdash; is output as &mdash;
-  smart_quotes  : [39, 39, 34, 34] # decimal for left/right single/double quotes
-exclude         : [bin]
+# Turn off built-in syntax highlighting.
+highlighter: false

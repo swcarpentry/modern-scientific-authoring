@@ -1,12 +1,11 @@
 ---
 layout: lesson
-subtitle: Introduction
 ---
+
 The goal of this lesson is to show how straightforward writing a paper should
 be in the 21^st^ century. We will go through the basics of Markdown, the way
 to use references, tables, and figures, how to automatically generate an
-up-to-date PDF, and see a few solutions to emulate track changes using Git and
-[CriticMarkup][cm].
+up-to-date PDF, and how to publish a blog or lab website.
 
 > ## Prerequisites
 >
@@ -17,21 +16,10 @@ up-to-date PDF, and see a few solutions to emulate track changes using Git and
 > *   Makefiles
 {: .prereq}
 
-Almost all text editors can be configured as a productive markdown-writing
-system. *RStudio* has a markdown mode. *Atom*, *vim*, and *Sublime Text* have
-very extensive markdown support, including auto-completion of bibliography
-through plugins.
+[RStudio][rstudio] and the [Jupyter Notebook][jupyter] have Markdown support,
+as do the [Atom][atom] and [Sublime Text][sublime] editors.
 
-## Topics
-
-1. [The Mess We're In](01-mess.html)
-2. [Markdown Basics](02-markdown.html)
-3. [Advanced Markdown](03-advanced.html)
-
-## Other Resources
-
-*   [Reference](reference.html)
-*   [Discussion](discussion.html)
-*   [Instructor's Guide](instructors.html)
-
-[cm]: http://criticmarkup.com/
+[atom]: https://atom.io/
+[jupyter]: http://jupyter.org/
+[rstudio]: https://www.rstudio.com/
+[sublime]: https://www.sublimetext.com/
