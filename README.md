@@ -11,4 +11,5 @@ Maintainers:
 
 * [Greg Wilson][wilson_greg]
 
+[lesson-example]: https://swcarpentry.github.io/lesson-example/
 [wilson_greg]: http://software-carpentry.org/team/#wilson_greg
