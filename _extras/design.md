@@ -4,61 +4,65 @@ title: "Lesson Design"
 permalink: /design/
 ---
 
-## Stage 0 - Assumptions
+## Process Used
+
+This lesson was developed using a slimmed-down variant of the "Understanding by Design" process.
+The main sections are:
+
+1.  Assumptions about audience, time, etc.
+    (The current draft also includes some conclusions and decisions in this 
+    section - that should be refactored.)
+
+2.  Desired results:
+    overall goals, summative assessments at half-day granularity, what learners 
+    will be able to do, what learners will know.
+
+3.  Learning plan:
+    each episode has a heading that summarizes what will be covered,
+    then estimates time that will be spent on teaching and on exercises,
+    while the exercises are given as bullet points.
+
+## Stage 1: Assumptions
 
 *   Audience
-    *   Graduate students or equivalent in *all* fields
-        *   Numerate disciplines (astronomy, economics)
-        *   Digital humanities
-        *   Librarians
+    *   Graduate students or equivalent in all fields from astronomy to the digital humanities
     *   Who are writing, publishing, and managing papers, theses, grant proposals, lessons, etc.
 *   Prerequisites
-    *   Git/GitHub (for GitHub Pages)
-    *   Command line (for Pandoc)
-    *   ...which is a problem, because Data Carpentry doesn't cover either
+    *   Git and GitHub (for publishing on GitHub Pages)
+    *   Unix shell (for Pandoc and LaTeX)
 *   Requirements
     *   Half day: 3.0 hours of instruction + exercises
     *   Learners use their own machines
 
-As stated in the "Manuscripts" section of
-"[Good Enough Practices in Scientific Computing][good-enough]",
-we want learners to:
+As stated in "[Good Enough Practices in Scientific Computing][good-enough]":
 
-1.  Make text accessible to yourself and others now and in the future
-2.  Reduce chances of work being lost or people overwriting each other's work.
-3.  Make it easy to track and combine contributions from multiple collaborators.
-4.  Avoid duplication and manual entry of information,
-    particularly in constructing bibliographies, tables of contents, and lists
-5.  Make it easy to regenerate the final shared form (e.g., the PDF),
-    and to tell if the PDF in hand is up to date.
-6.  Make it easy to share the final version with collaborators and submit it to journals
-
-We recommend against traditional desktop tools like LibreOffice and Microsoft Word
-because they make collaboration difficult:
-six people mailing each other copies of a paper with "Track Changes" enabled
-is a sure way to lose work (and time).
-The nerd alternative is:
-
-1.  Manuscripts are written in a plain text format such as LaTeX or Markdown that plays nicely with version control
-2.  Tools needed to compile manuscripts are managed just like tools used to do simulation or analysis
-
-But as Stephen Turner said:
-
-> ...try to explain the notion of compiling a document to an overworked physician you collaborate with.
+> 1.  Make text accessible to yourself and others now and in the future
+> 2.  Reduce chances of work being lost or people overwriting each other's work.
+> 3.  Make it easy to track and combine contributions from multiple collaborators.
+> 4.  Avoid duplication and manual entry of information,
+>     particularly in constructing bibliographies, tables of contents, and lists
+> 5.  Make it easy to regenerate the final shared form (e.g., the PDF),
+>     and to tell if the PDF in hand is up to date.
+> 6.  Make it easy to share the final version with collaborators and submit it to journals
+> 
+> We recommend against traditional desktop tools like LibreOffice and Microsoft Word
+> because they make collaboration difficult:
+> six people mailing each other copies of a paper with "Track Changes" enabled
+> is a sure way to lose work (and time).
+> The nerd alternative is:
+> 
+> 1.  Manuscripts are written in a plain text format such as LaTeX or Markdown that plays nicely with version control
+> 2.  Tools needed to compile manuscripts are managed just like tools used to do simulation or analysis
+> 
+> But as Stephen Turner said, 
+> "...try to explain the notion of compiling a document to an overworked physician you collaborate with.
 > Oh, but before that, you have to explain the difference between plain text and word processing.
 > And text editors.
 > And Markdown/LaTeX compilers.
 > And BiBTeX.
 > And Git.
 > And GitHub. Etc.
-> Meanwhile he/she is getting paged from the OR...
->
-> ...as much as we want to convince ourselves otherwise,
-> when you have to collaborate with those outside the scientific computing bubble,
-> the barrier to collaborating on papers in this framework is simply too high to overcome.
-> Good intentions aside,
-> it always comes down to "just give me a Word document with tracked changes," or similar.
-> There's always a least common denominator who just isn't going to be on board for writing like this.
+> Meanwhile he/she is getting paged from the OR..."
 {: .quotation}
 
 We therefore *also* support an alternative to text + version control:
@@ -76,75 +80,126 @@ The justification is:
 *   If the document lives in a version control system (GitHub),
     it provides good support for finding and merging differences resulting from concurrent changes.
 
-But we need to go further.
-If people adopt open review and comment on each other's work on blogs and via Twitter,
-the under-represented (e.g., women and some minorities) may be discouraged from taking part
-(as has happened with open source).
-Any discussion of how to use the web for scientific publishing *must* include
-discussion of how it can be mis-used,
-and what we can do about it.
-FIXME: translate this into a lesson.
+## Stage 2: Desired Results
 
-## Stage 1 - Desired Results
+### Questions
 
-### Goals
-
-*   Understand the pros and cons of
-    1.  Desktop WYSIWYG (e.g., Microsoft Word)
-    2.  Online WYSIWYG (e.g., Google Docs)
-    3.  Plain text in version control (e.g., Markdown + GitHub)
-*   Have hands-on experience with approach #3 (plain text + version control)
-*   Understand the similarities and differences between Markdown and LaTeX
-*   Have an ORCID and know what to do with it
-*   Understand how and why to publish and cite software and data
-*   Understand the pros and cons of new publishing and review models
-
-### Essential Questions
-
-*   How can I manage the flood of information in my field?
-*   How can I make my work more accessible to others in my field?
-*   How does desktop WYSIWYG + email impede collaboration?
-*   Why is plain text + version control so technically demanding?
+*   How do I make my work more accessible to others in my field?
+*   How do I collaborate with colleagues while writing?
 *   How do publishers and researchers keep track of who published what?
-*   How can open access scientific publishing be sustainable?
-*   What are the pros and cons of open review?
+*   How can open access publication and open review be implemented?
+*   What are their pros and cons?
 
-### Learners Will Be Able To...
+### Skills
 
-*   write Markdown
-*   compile Markdown to PDF or HTML using Pandoc
-*   publish Markdown using GitHub Pages
-*   create a PDF using Authorea
-*   comment on a web page using hypothes.is
-*   add their ORCID to electronic manuscripts
-*   get a DOI for a data set from Figshare or Zenodo
-*   review a document on Google Docs
-*   review a document on GitHub
+I can...
 
-### Learners Will Know...
+*   ...write and review research-related documents in Google Docs
+*   ...write research-related documents in Markdown
+*   ...review documents on GitHub
+*   ...turn Markdown into PDF or HTML using Pandoc
+*   ...publish Markdown using GitHub Pages and Jekyll
+*   ...comment on a web page using hypothes.is
+*   ...add my ORCID to electronic manuscripts
+*   ...get a DOI for a publication from Zenodo
 
-*   what markup is and why it exists
-*   that *every* document uses markup - the only question is whether it's displayed or not
-*   the advantages of making data and software citable
-*   how and why to participate in online discussions of research
-*   how LaTeX, Pandoc, and Authorea work
-*   how and why to use [hypothes.is](hypothes.is)
-*   what ORCID is
-*   why data and programs should have DOIs
-*   how pull requests work (so that updating and reviewing is understandable)
+### Knowledge
 
-## Stage 2 - Assessment
+I know...
 
-FIXME: need a dozen sections like this:
+*   ...the difference between WYSIWYG formats and markup
+*   ...the pros and cons of each
+*   ...how LaTeX, Pandoc, and Authorea work
+*   ...how and why to use [hypothes.is][hypothesis]
+*   ...what an ORCID is (and how to get and use one)
+*   ...why data and programs should have DOIs (and how to get and use them)
+*   ...the pros and cons of open access publication and open review
 
-### Topic title
+## Stage 3: Assessment
 
-*   Teaching: 5-10 min
-*   Exercises: 5-10 min
-    *   FIXME: one-line explanation of exercise
+### Summative Assessment
 
-## Stage 3 - Learning Plan
+1.  Convert a Markdown document to a Google Doc to share with collaborators.
+2.  Publish the same document as a single-page website with GitHub Pages.
 
-FIXME
+### Introduction (9:00)
+
+*   Teaching: 15 min
+    *   Evolution of WYSIWYG and markup
+    *   Pros and cons of each: human-readable vs. machine-readable
+*   Challenges: 10 min
+    *   Try to interpret the source of an RTF document
+
+### Basic Markdown (09:25)
+
+*   Teaching: 10 min
+    *   Basic markup
+    *   Note: use in-browser editor, not compilation
+*   Challenges: 5 min
+    *   Replicate a simple web page
+
+### Translating Markdown (09:40)
+
+*   Teaching: 15 min (includes setup issues)
+    *   Using Pandoc on the command line to create HTML and PDF
+*   Challenges: 10 min
+    *   Translate simple page into other formats (including Word)
+
+### GitHub Pages (10:05)
+
+*   Teaching: 20 min
+    *   The `gh-pages` branch
+    *   Layouts
+    *   `_config.yml`
+    *   Empty YAML headers
+    *   Where to view generated site
+*   Challenges: 10 min
+    *   Reproduce what the instructor has been doing
+
+### Coffee (10:35): 10 min
+
+### Reviewing Material on GitHub (10:45)
+
+*   Teaching: 10 min
+    *   Line comments
+    *   Issues
+    *   Do *not* introduce pull requests
+*   Challenges: 10 min
+    *   Leave comments on instructor's pages
+
+### Open Publication and Review (11:05)
+
+*   Teaching: 5 min
+    *   Ask leading questions
+*   Challenges: 15 min
+    *   Guided discussion of pros and cons
+
+### Tracking Work (11:25)
+
+*   Teaching: 15 min
+    *   DOIs
+    *   ORCIDs
+*   Challenges: 10 min
+    *   Get a DOI from Zenodo
+    *   Get an ORCID and add it to a page
+
+### Working with Others (11:55)
+
+*   Teaching: 10 min
+    *   Markdown to Word via Pandoc
+    *   Uploading to Google Docs
+    *   Commenting on Google Docs
+*   Challenges: 5 min
+    *   Replicate instructor's work
+
+### Wrap-Up (12:10)
+
+*   Teaching: 10 min
+    *   Quick summary with pointers
+*   Challenges: 10 min
+    *   Give feedback
+
+### Finish (12:30)
 
 [good-enough]: https://github.com/swcarpentry/good-enough-practices-in-scientific-computing
+[hypothesis]: hypothes.is
